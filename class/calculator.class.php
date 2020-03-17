@@ -55,10 +55,11 @@ class Calculator{
 	}
 	//Function for showing logs
 	public function showMeLogs(){
-		$sql = "SELECT factor1,factor2,result,operation_date FROM {$this->table}";
+		$sql = "SELECT id,factor1,factor2,result,operation_date FROM {$this->table} ORDER BY id DESC";
 		$result = mysqli_query($this->conn,$sql);
     	//Table header
     	echo "<thead><tr>";
+    	echo "<th>ID</th>";
     	echo "<th>Factor 1</th>";
     	echo "<th>Factor 2</th>";
     	echo "<th>Result</th>";
@@ -68,7 +69,8 @@ class Calculator{
     	//Table body
     	echo "<tbody>";
     	while($row = mysqli_fetch_assoc($result)) {
-    		echo "<tr><td>{$row['factor1']}</td>";
+    		echo "<tr><td>{$row['id']}</td>";
+    		echo "<td>{$row['factor1']}</td>";
     		echo "<td>{$row['factor2']}</td>";
     		echo "<td>{$row['result']}</td>";
     		echo "<td>{$row['operation_date']}</td></tr>";
