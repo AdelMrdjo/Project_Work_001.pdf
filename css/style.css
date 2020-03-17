@@ -1,0 +1,49 @@
+body{
+	margin:0;
+	padding:0;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.container table{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.container table tr th,.container table tr td,.logs table tr th,.logs table tr td{
+	text-align: center;
+}
+.container table tr td:hover{
+	background:#ebebeb;
+}
+
+.logs{
+	width: 70%;
+	height: 70%;
+	background: #fff;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	border-radius:15px;
+	padding:15px;
+	color:#fff;
+	display: none;
+	-webkit-box-shadow: 5px 5px 20px 3px rgba(0,0,0,0.41);
+	-moz-box-shadow: 5px 5px 20px 3px rgba(0,0,0,0.41);
+	box-shadow: 5px 5px 20px 3px rgba(0,0,0,0.41);
+	overflow-y: scroll;
+}
+.logs table{
+	color:#000;
+}
+/*================Responsive===============*/
+@media only screen and (max-width: 600px){
+	.container table tr th,.container table tr td,.logs table tr th,.logs table tr td{
+		font-size: 11px;
+	}
+}
